@@ -1,10 +1,11 @@
 #define button 6
-#define jsX A0
-#define jsY A1
+#define jsX A2
+#define jsY A3
 
 #include <Keyboard.h>
 
 void setup() {
+  Serial.begin(9600);
   pinMode(button, INPUT_PULLUP);
 }
 
@@ -50,8 +51,11 @@ void loop() {
 
   if(buttonControl == LOW) {
     Keyboard.press('B');
+    Serial.println("button");
   }
   else {
     Keyboard.release('B');
   }
+
+  delay(10);
 }
