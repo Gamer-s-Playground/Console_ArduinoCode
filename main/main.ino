@@ -9,5 +9,13 @@ void setup() {
 }
 
 void loop() {
+  //button
+  int buttonControl = digitalRead(button);
 
+  if(buttonControl == LOW) {
+    Keyboard.press('B');
+  }
+  else {
+    Keyboard.release('B');
+  }
 }
