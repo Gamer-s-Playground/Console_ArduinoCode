@@ -16,34 +16,34 @@ void loop() {
 
   //left
   if(currX == 1023) {
-    Keyboard.press(KEY_LEFT_ARROW);
-  }
-  else {
-    Keyboard.release(KEY_LEFT_ARROW);
-  }
-
-  //right
-  if(currX == 0) {
     Keyboard.press(KEY_RIGHT_ARROW);
   }
   else {
     Keyboard.release(KEY_RIGHT_ARROW);
   }
 
-  //up
-  if(currY == 1023) {
-    Keyboard.press(KEY_UP_ARROW);
+  //right
+  if(currX == 0) {
+    Keyboard.press(KEY_LEFT_ARROW);
   }
   else {
-    Keyboard.release(KEY_UP_ARROW);
+    Keyboard.release(KEY_LEFT_ARROW);
   }
 
-  //down
-  if(currY == 0) {
+  //up
+  if(currY == 1023) {
     Keyboard.press(KEY_DOWN_ARROW);
   }
   else {
     Keyboard.release(KEY_DOWN_ARROW);
+  }
+
+  //down
+  if(currY == 0) {
+    Keyboard.press(KEY_UP_ARROW);
+  }
+  else {
+    Keyboard.release(KEY_UP_ARROW);
   }
 
   //button
